@@ -1,13 +1,13 @@
 # Clippy PFP Generator 🖼️📎
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Live Demo](https://img.shields.io/badge/Demo-Live-blue)](https://Utkarsh-username.github.io/Clippy-PFP-Generator/)
+[![Live Demo](https://img.shields.io/badge/Demo-Live-blue)](https://clippypfp.netlify.app/)
 
-Generate nostalgic, meme-ready Clippy profile pictures right in your browser by layering transparent PNG parts (backgrounds, body shapes, heads, eyes, mouths, hands, decorations). Everything renders client-side onto a 512×512 canvas—no server, no tracking beyond basic analytics, and no image uploads needed.
+Generate nostalgic, meme-ready Clippy profile pictures right in your browser by layering transparent PNG parts (backgrounds, body shapes, heads, eyes, mouths, hands, decorations). Everything renders client-side onto a 512×512 canvas.
 
 ## ✨ About
 
-This project is a lightweight static web app that lets you compose a custom "Clippy" style avatar. It grew out of the recent wave of people adopting paperclip-themed profile pictures. The goal: make remixing fast, intuitive, and privacy-respecting.
+This project is a lightweight static web app that lets you compose a custom "Clippy" avatar. It grew out of the recent wave of people adopting paperclip-themed profile pictures. Our goal: make remixing fast and intuitive.
 
 Key characteristics:
 
@@ -16,7 +16,7 @@ Key characteristics:
 - **Optional layers**: Each non-body layer is optional (create minimalist variants)
 - **Export**: Produces a transparent PNG
 - **Theme toggle**: Light/dark mode stored locally
-- **Offline-ready**: Works offline after first load (static assets)
+- **Offline-ready**: Works offline (static assets)
 
 Not affiliated with Microsoft. All assets are fan-made for fun/parody purposes.
 
@@ -33,13 +33,13 @@ Not affiliated with Microsoft. All assets are fan-made for fun/parody purposes.
 
 1. Open the site (or double-click `index.html` locally).
 2. Use the tabs to switch part categories.
-3. Click thumbnails to select/deselect (for non-body categories, choose "None").
+3. Click thumbnails to select/deselect (for non-body categories, you can choose "None").
 4. Press **Randomize** to explore.
 5. Press **Download** to save the current composite PNG.
 
 ### Live Demo
 
-Check out the [live demo](https://Utkarsh-username.github.io/Clippy-PFP-Generator/) to try it out!
+Check out the [live demo](https://clippypfp.netlify.app/) to try it out!
 
 ## 📁 Project Structure
 
@@ -56,6 +56,7 @@ generate-manifest.js   # Node script to build manifest.json list of PNGs
 manifest.json          # Generated mapping { folder: [files...] }
 index.html             # Single-page application (HTML + inline JS)
 README.md              # This file
+Why-Is-Everyone-Changing-Their-Profile-Picture-to-Clippy.html #Article explaining the clippy movement
 ```
 
 ## 🛠️ Asset Manifest
@@ -76,7 +77,7 @@ This will overwrite `manifest.json` with a fresh list.
 
 1. Drop a new `.png` into the appropriate subfolder under `assets/`.
 2. Run the manifest generation script.
-3. Reload the page—new part appears automatically.
+3. Reload the page. New part appears automatically.
 
 **Guidelines:**
 
@@ -86,7 +87,7 @@ This will overwrite `manifest.json` with a fresh list.
 
 ## 🛠️ Development
 
-No build step is required (Tailwind CDN). If you prefer a build pipeline later, you could extract the inline script and adopt a proper Tailwind config/purge.
+No build step is required (Tailwind CDN). Just regenrate the manifest if required, and open index.html.
 
 ### Potential Improvements (PRs Welcome!)
 
