@@ -1,7 +1,7 @@
 # Clippy PFP Generator 🖼️📎
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Live Demo](https://img.shields.io/badge/Demo-Live-blue)](https://Utkarsh-username.github.io/Clippy-PFP-Generator/)
+[![Live Demo](https://img.shields.io/badge/Demo-Live-blue)](https://clippypfp.netlify.app/)
 
 Generate nostalgic, meme-ready Clippy profile pictures right in your browser by layering transparent PNG parts (backgrounds, body shapes, heads, eyes, mouths, hands, decorations). Everything renders client-side onto a 512×512 canvas—no server, no tracking beyond basic analytics, and no image uploads needed.
 
