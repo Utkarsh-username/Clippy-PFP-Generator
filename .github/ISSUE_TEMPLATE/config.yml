@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Documentation
+    url: https://github.com/SpreadSheets600/exam-countdown-extension#readme
+    about: Check the README for usage instructions and FAQs
+  - name: 💬 Discussions
+    url: https://github.com/SpreadSheets600/exam-countdown-extension/discussions
+    about: Start a discussion for general questions or ideas
+  - name: 🐛 Browser Extension Store Issues
+    url: https://chrome.google.com/webstore/detail/exam-countdown-extension
+    about: Report issues specific to the extension store listing
