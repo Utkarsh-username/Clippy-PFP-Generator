@@ -13,6 +13,7 @@
 	const randomizeBtn = document.getElementById("randomize");
 	const themeToggle = document.getElementById("themeToggle");
 	const panelsEl = document.getElementById("thumbs-container");
+	const copyBtn = document.getElementById("copy-canvas");
 
 	const THEME_KEY = "clippy_theme";
 	function applyTheme(t) {
@@ -386,6 +387,27 @@
 			const delta = e.key === "ArrowRight" ? 1 : -1;
 			const next = folders[(idx + delta + folders.length) % folders.length];
 			switchFolder(next);
+		}
+	});
+
+	copyBtn.addEventListener('click', async () => {
+		try {
+			const canvas = document.getElementById('preview');
+			canvas.toBlob(async (blob) => {
+				if (navigator.clipboard && window.ClipboardItem) {
+					await navigator.clipboard.write([
+						new window.ClipboardItem({ 'image/png': blob })
+					]);
+				}
+			}, 'image/png');
+			//feedback near preview
+			let msg = document.createElement('div');
+			msg.textContent = 'Copied!';
+			msg.className = 'absolute top-3 left-1/2 -translate-x-1/2 z-30 bg-sky-600 text-white px-4 py-2 rounded-lg shadow-lg font-semibold text-base pointer-events-none';
+			canvas.parentElement.appendChild(msg);
+			setTimeout(() => msg.remove(), 1500);
+		} catch (e) {
+			alert('Copy failed');
 		}
 	});
 })();
